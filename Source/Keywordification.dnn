@@ -1,6 +1,7 @@
-﻿<dotnetnuke type="Package" version="5.0">
+﻿
+<dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="Keywordification" type="Module" version="0.2.2375">
+    <package name="Keywordification" type="Module" version="0.2.3477">
       <friendlyName>Keywordification</friendlyName>
       <description>used to quickly edit all tab name/title/keyword/descriptions at once with ease</description>
       <owner>
@@ -58,7 +59,7 @@
             <attributes>
               <businessControllerClass>OliverHine.Modules.Keywordification.DnnController</businessControllerClass>
               <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
-              <upgradeVersionsList>00.02.2375</upgradeVersionsList>
+              <upgradeVersionsList>00.02.3477</upgradeVersionsList>
             </attributes>
           </eventMessage>
         </component>

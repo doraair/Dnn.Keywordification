@@ -1,0 +1,8 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Source/bin
+/Source/obj
+Source/Keywordification.vbproj.user
