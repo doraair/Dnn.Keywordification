@@ -124,7 +124,7 @@ WinDoH.ViewKeywordification.prototype =
 
 
         dnn.xmlhttp.callControlMethod('WinDoH.ViewKeywordification.' + this.get_id(),
-            'GetPortalTabs', { portalId: this.get_PortalId() }, this._delegates._loadDataSuccessDelegate, this._delegates._loadDataFailDelegate);
+            'GetPortalTabs', { }, this._delegates._loadDataSuccessDelegate, this._delegates._loadDataFailDelegate);
 
         this.raisePropertyChanged('LoadedData');
     },

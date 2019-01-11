@@ -2,6 +2,7 @@
 Imports System.Web.UI
 Imports System.Collections.Generic
 Imports DotNetNuke
+Imports DotNetNuke.Framework.JavaScriptLibraries
 Imports DotNetNuke.Services.Exceptions
 Imports DotNetNuke.Services.Localization
 Imports DotNetNuke.UI.Utilities
@@ -61,7 +62,7 @@ Namespace Modules.Keywordification
 
         Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
             Try
-                DotNetNuke.Framework.jQuery.RequestRegistration()
+                JavaScript.RequestRegistration(CommonJs.jQuery)
 
             Catch exc As Exception        'Module failed to load
                 ProcessModuleLoadException(Me, exc)
@@ -77,9 +78,9 @@ Namespace Modules.Keywordification
         '-------------------------------------------------------------------------------------------------------------
 
         <ControlMethod()> _
-        Public Function GetPortalTabs(ByVal portalId As Integer) As PagedResult(Of MiniTabInfo)
+        Public Function GetPortalTabs() As PagedResult(Of MiniTabInfo)
             Try
-                Dim arrTabs As List(Of Entities.Tabs.TabInfo) = Entities.Tabs.TabController.GetPortalTabs(portalId, Me.PortalSettings.AdminTabId, False, String.Empty, True, False, False, True, True)
+                Dim arrTabs As List(Of Entities.Tabs.TabInfo) = Entities.Tabs.TabController.GetPortalTabs(Me.PortalId, Me.PortalSettings.AdminTabId, False, String.Empty, True, False, False, True, True)
                 Dim arrAdminTabs As List(Of Entities.Tabs.TabInfo) = Entities.Tabs.TabController.GetTabsByParent(Me.PortalSettings.AdminTabId, Me.PortalId)
 
                 For Each objTab As Entities.Tabs.TabInfo In arrAdminTabs
