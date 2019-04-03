@@ -86,9 +86,9 @@ WinDoH.ViewKeywordification.prototype =
                     { name: 'TabID', index: 'TabID', hidden: true },
                     { name: 'SiteMapPriority', index: 'SiteMapPriority', width: 30, hidden: false, editable: true, align: 'center', resizable: false },
                     { name: 'TabName', index: 'TabName', width: 100, hidden: false, editable: true },
-                    { name: 'Title', index: 'Title', width: 175, editable: true, edittype: 'textarea', editoptions: { maxlength: '69', rows: 3 } },
+                    { name: 'Title', index: 'Title', width: 175, editable: true, edittype: 'textarea', editoptions: { maxlength: '150', rows: 3 } },
                     { name: 'KeyWords', index: 'KeyWords', width: 100, editable: true, edittype: 'textarea', editoptions: { rows: 3 } },
-                    { name: 'Description', index: 'Description', width: 400, editable: true, edittype: 'textarea', editoptions: { maxlength: '170', rows: 3 } }
+                    { name: 'Description', index: 'Description', width: 400, editable: true, edittype: 'textarea', editoptions: { maxlength: '300', rows: 3 } }
                 ],
                 jsonReader: {
                     root: "rows",
